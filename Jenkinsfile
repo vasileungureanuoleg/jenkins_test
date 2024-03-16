@@ -1,6 +1,9 @@
 #!groovy
 pipeline {
   agent none
+  triggers {
+      githubPush()
+    }
   options {
     timestamps()
     skipStagesAfterUnstable()
